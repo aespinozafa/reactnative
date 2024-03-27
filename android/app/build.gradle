@@ -84,14 +84,16 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.reactnative"
-    defaultConfig {
-        applicationId 'com.tonydev9891.reactNative'
-         minSdkVersion 23
-        targetSdkVersion 34
+        defaultConfig {
+        applicationId 'com.tonydev9891.reactNativeS'
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"
+
         buildConfigField("boolean", "REACT_NATIVE_UNSTABLE_USE_RUNTIME_SCHEDULER_ALWAYS", (findProperty("reactNative.unstable_useRuntimeSchedulerAlways") ?: true).toString())
     }
+  
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
