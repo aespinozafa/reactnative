@@ -86,11 +86,10 @@ android {
     namespace "com.reactnative"
     defaultConfig {
         applicationId 'com.tonydev9891.reactNative'
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+         minSdkVersion 23
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0.0"
-
         buildConfigField("boolean", "REACT_NATIVE_UNSTABLE_USE_RUNTIME_SCHEDULER_ALWAYS", (findProperty("reactNative.unstable_useRuntimeSchedulerAlways") ?: true).toString())
     }
     signingConfigs {
